@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--Logger configurations file, configure the Logger to use specific configurations and functionality here-->
+
+<Configuration status="WARN">
+    <Appenders>
+        <!--Configure logger messaging output to the IDE Console here. This is where you configure the format
+         and type of Logging messages you want to see in your IDE console when test are run -->
+        <Console name="Console" target="SYSTEM_OUT">
+            <!--set desired console log output colors and format-->
+            <PatternLayout pattern="%highlight{[%-5level] - %m%n}{FATAL=normal red, ERROR=normal red, WARN=normal yellow, INFO=normal, DEBUG=cyan, TRACE=magenta}"/>
+        </Console>
+    </Appenders>
+    <Loggers>
+        <!--Specify the lowest level of Logger messages you would like to see. For example, setting this to "TRACE" will display -->
+        <!--every level of Logger messages, setting this to "FATAL" will display the least amount of Logger messages. -->
+        <Root level="TRACE">
+            <AppenderRef ref="Console"/>
+        </Root>
+    </Loggers>
+</Configuration>
